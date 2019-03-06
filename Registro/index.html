@@ -1,0 +1,90 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+      <div class="container">
+        <div class="card-panel center #e8eaf6 indigo lighten-5">
+          <h1>Registro</h1>
+
+          <form action="#">
+            <div class="input-field" data-validate="Introduce tu matricula">
+              <input placeholder="Introduce tu matricula" id="matricula" type="number" class="validate">
+              <label for="matricula">Matricula</label>
+            </div>
+
+            <div class="input-field" data-validate="Introduce tu nombre">
+              <input placeholder="Introduce tu nombre" id="nombre" type="text" class="validate">
+              <label for="nombre">Nombre(s)</label>
+            </div>
+
+            <div class="input-field" data-validate="Introduce tu apellido paterno">
+              <input placeholder="Introduce tu apellido paterno" id="paterno" type="text" class="validate">
+              <label for="paterno">Apellido Paterno</label>
+            </div>
+
+            <div class="input-field" data-validate="Introduce tu apellido materno">
+              <input placeholder="Introduce tu apellido materno" id="materno" type="text" class="validate">
+              <label for="materno">Apellido Materno</label>
+            </div>
+            
+            <div class="input-field" data-validate = "Enter Your Email (e@a.x)">
+              <input placeholder="Introduce tu correo" id="email" type="email" class="validate">
+              <label for="email">Correo Electronico</label>
+            </div>
+
+            <div class="input-field">
+              <select>
+                <optgroup label="team 1">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </optgroup>
+                <optgroup label="team 2">
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                </optgroup>
+              </select>
+              <label>Optgroups</label>
+            </div>
+            
+            <div class="input-field" data-validate = "Ingresa tu contraseña">
+              <input placeholder="Introduce tu contraseña" id="contraseña" type="password" class="validate">
+              <label for="contraseña">Contraseña</label>
+            </div>
+
+            <h3>Politicas de privacidad</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec lobortis sem, et accumsan massa. Vivamus a justo sollicitudin, lobortis metus vel, lacinia justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean in nisi eu nulla ullamcorper condimentum facilisis nec est. Cras ac commodo ex. Suspendisse non est metus. Quisque ultricies consectetur justo. Fusce nisl metus, fringilla eget maximus eget, faucibus et augue. Ut vel magna mauris. Nulla facilisi. Ut quis euismod risus. Suspendisse massa mauris, dapibus eget auctor quis, viverra id lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam sodales purus at purus tincidunt, ac vestibulum massa euismod.</p>
+
+            
+              <p>
+                <label>
+                  <input type="checkbox" />
+                  <span>Acepto</span>
+                </label>
+              </p>
+            
+
+            
+            <input type="submit" value="submit" class="waves-effect waves-light btn">
+          </form>
+        </div>
+      </div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('select');
+          var instances = M.FormSelect.init(elems, options);
+        });
+      </script>
+    </body>
+  </html>
