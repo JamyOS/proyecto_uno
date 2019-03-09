@@ -1,0 +1,53 @@
+class Calculadora{
+	var numero1:Double
+	var numero2:Double
+	var resultado:Double?=null
+	constructor( numero1:Double, numero2:Double){this.numero1=numero1; this.numero2=numero2}
+
+	fun sumar(){ 
+		resultado=numero1+numero2
+		println("La suma total es:$resultado")}
+	fun restar(){ 
+		resultado=numero1-numero2
+		println("La resta total es:$resultado")}
+	fun multiplicar(){ 
+		resultado=numero1*numero2
+		println("La multiplicacion total es:$resultado")}		
+
+}
+	fun insertar():Calculadora{
+		var numero1:Double
+		var numero2:Double
+		println("Ingrese el primer valor")
+		numero1=readLine()?.toDouble()as Double
+		println("Ingrese el segundo valor")
+		numero2=readLine()?.toDouble()as Double
+		var Cal=Calculadora(numero1,numero2)
+		return Cal}
+fun Menu():Int{
+	var opc:Int
+	println("Seleccione la operacion")
+	println("0.Sumar")
+	println("1.Restar")
+	println("2.Multiplicar")
+	println("3.--Salir")
+	opc=try{readLine()?.toInt() as Int}
+	catch(_: NumberFormatException){4} 
+	return opc}
+	fun main(){
+	do{
+		var opc=Menu();
+
+	when(opc){
+			3->{println("Fin")}
+			0->{var Cal=insertar()
+				Cal.sumar()}  
+			1->{var Cal=insertar()
+				Cal.restar()}
+			2->{var Cal=insertar()
+				Cal.multiplicar()}
+			else->{println("opcion no valida")}
+		}
+	}while(opc!=0)
+
+}
